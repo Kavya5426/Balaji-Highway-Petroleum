@@ -1,0 +1,310 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+/*body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    }
+*/
+.left-section {
+    width: 50%;
+    background: url('Assets/Logo.png') no-repeat center center/cover;
+    }
+.right-section {
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    }
+.form-heading {
+    color:#025ead;
+    font-size: 35px; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center the text */ 
+    margin-bottom: 20px; /* Add space between heading and form */
+}
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 0px;
+    }
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    }
+.form-group {
+    margin-bottom: 15px;
+    }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+    }
+.form-group a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    }
+.form-group a:hover {
+    text-decoration: underline;
+    }
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #fb9f00;
+    color: white;
+    border: 2px black;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+.submit-btn:hover {
+    background:#fb9f00 ;
+    border-color:#025ead;
+    }
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Dashboard (Left Panel) */
+.dashboard {
+    width: 20%;
+    background-color: #025ead;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase; /* Optional: Makes text uppercase */
+    border-bottom: 2px solid #555; /* Optional: Adds a separator */
+    padding-bottom: 10px;
+    width: 90%; /* Matches the width of the dashboard items */
+}
+
+.dashboard-item {
+    width: 90%;
+    padding: 15px 10px;
+    background-color: #fb9f00;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.dashboard-item:hover {
+    background-color: #555;
+}
+
+.dashboard-item:active {
+    transform: scale(1.1);
+}
+
+/* Content Area (Right Panel) */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    background-color: whitesmoke;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    
+    width: 800px;
+    height: 80vh;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    max-width: 400px;
+    max-height:400px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* Digital Card */
+.digital-card-container {
+    margin: 20px;
+    text-align: center;
+    display: none;
+}
+
+.digital-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 10px;
+}
+/* Styling for the form */
+#new-card-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Add spacing between form elements */
+    padding: 20px; /* Increase padding around the form */
+}
+
+/* Styling for inputs */
+#new-card-form input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Add padding inside the input */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Styling for labels */
+#new-card-form label {
+    font-weight: bold; /* Make labels bold */
+    font-size: 14px; /* Adjust font size */
+    margin-bottom: 5px; /* Add space below labels */
+}
+
+/* Styling for the button */
+#new-card-form button {
+    padding: 10px 20px; /* Adjust button size */
+    background-color: #fb9f00; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+}
+
+#new-card-form button:hover {
+    background-color: #025ead; /* Change background on hover */
+}
+/* Styling for the form */
+#otp-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    gap: 20px; /* Add spacing between elements */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Restrict form width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Label styling */
+#otp-form label {
+    font-weight: bold; /* Make label text bold */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Darker color for better contrast */
+}
+
+/* Input styling */
+#otp-form input[type="text"] {
+    width: 100%; /* Full width of the form */
+    padding: 12px; /* Add padding for better appearance */
+    font-size: 16px; /* Increase font size for readability */
+    border: 2px solid #ccc; /* Default border */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Highlight on focus or active */
+#otp-form input[type="text"]:focus,
+#otp-form input[type="text"]:active {
+    border-color: #025ead; /* Change border color to blue */
+    box-shadow: 0 0 5px rgba(2, 94, 173, 0.5); /* Add subtle glow effect */
+}
+
+/* Button styling */
+#otp-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #fb9f00; /* Vibrant orange */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover and active effects */
+#otp-form button:hover {
+    background-color: #025ead; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+#otp-form button:active {
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+
